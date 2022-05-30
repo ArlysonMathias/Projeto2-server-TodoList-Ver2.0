@@ -21,14 +21,11 @@ class TarefasService {
     };
 
     try {
-
       const tarefa = await Tarefa.create(novaTarefa);
       return tarefa;
-      
     } catch (error) {
       throw error;
     }
-
   }
   async atualizarTarefa({ atividade, id }) {
     const tarefaAtualizada = {
@@ -37,22 +34,19 @@ class TarefasService {
 
     try {
       await Tarefa.updateOne({ _id: id }, tarefaAtualizada);
-  
+
       const tarefa = await Tarefa.findById(id);
-  
+
       return tarefa;
-      
     } catch (error) {
       throw error;
     }
-
   }
   async deletarTarefa({ id }) {
-   const tarefa = await Tarefa.findByIdAndDelete(id);
+    const tarefa = await Tarefa.findByIdAndDelete(id);
 
-   return tarefa;
+    return tarefa;
   }
-  
 }
 
 export default TarefasService;

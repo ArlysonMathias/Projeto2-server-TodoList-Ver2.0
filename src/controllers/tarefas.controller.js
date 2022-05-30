@@ -40,15 +40,13 @@ class TarefasController {
         atividade,
         id,
       });
-  
+
       res.send(tarefaAtualizada);
-      
     } catch (error) {
-      if(error.code === 11000){
-        res.status(400).send("Tarefa já cadastrada")
+      if (error.code === 11000) {
+        res.status(400).send('Tarefa já cadastrada');
       }
     }
-
   }
   async deletarTarefa(req, res) {
     const id = req.params.id;
