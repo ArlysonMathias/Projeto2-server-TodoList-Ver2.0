@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "atividade" : "dormir"
+    },
+    {
+        "id": 2,
+        "atividade": "almoçar"
+    },
+    {
+        "id": 3,
+        "atividade": "codar"
+    }
+]
